@@ -1,8 +1,10 @@
 """Worship calendar for the simulated mosque week (Dubai, 9-15 Nov 2026).
 
 ASSUMPTIONS - replace before relying on any number:
-- Prayer times are APPROXIMATE Dubai times for mid-November, held constant
-  across the week. Replace with the official Awqaf timetable.
+- Prayer times are the OFFICIAL IACAD (Dubai government) times for 5 Nov 2026
+  (https://iacad.gov.ae/en/prayer-times), held constant across the week; real
+  times drift a few minutes over 7 days. For the demo, read each day's times
+  from the IACAD page.
 - UAE Friday prayer (Jumu'ah) is assumed at 13:15 (unified time since 2022);
   confirm before the pitch.
 - Occupancy windows (minutes before/after the call to prayer) are guesses;
@@ -13,13 +15,13 @@ from datetime import date, datetime, timedelta
 WEEK_START = date(2026, 11, 9)  # Monday
 DAYS = 7
 
-# Approximate Dubai prayer times, mid-November (HH:MM)
+# Official IACAD Dubai prayer times for 5 Nov 2026 (HH:MM)
 PRAYERS = {
-    "Fajr": "05:13",
-    "Dhuhr": "11:58",
-    "Asr": "15:08",
-    "Maghrib": "17:34",
-    "Isha": "18:49",
+    "Fajr": "05:10",
+    "Dhuhr": "12:05",
+    "Asr": "15:14",
+    "Maghrib": "17:39",
+    "Isha": "18:55",
 }
 JUMUAH = "13:15"
 
